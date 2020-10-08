@@ -29,77 +29,61 @@
                       android:orientation="vertical">
 
             <TextView
-                    android:text="@string/first_question"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q1"/>
             <CheckBox
-                    android:text="@string/q1_a1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q1_a1"/>
             <CheckBox
-                    android:text="@string/q1_a2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q1_a2"/>
             <CheckBox
-                    android:text="@string/q1_a3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q1_a3"/>
 
             <TextView
-                    android:text="@string/first_question"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q2"/>
             <CheckBox
-                    android:text="@string/q1_a1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q2_a1"/>
             <CheckBox
-                    android:text="@string/q1_a2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q2_a2"/>
             <CheckBox
-                    android:text="@string/q1_a3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q2_a3"/>
 
             <TextView
-                    android:text="@string/third_question"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q3"/>
             <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                 <RadioButton
-                        android:text="@string/q3_a1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q3_a1"/>
                 <RadioButton
-                        android:text="@string/q3_a2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q3_a2"/>
                 <RadioButton
-                        android:text="@string/q3_a3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q3_a3"/>
             </RadioGroup>
 
             <TextView
-                    android:text="@string/fourth_question"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/q4"/>
             <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                 <RadioButton
-                        android:text="@string/q4_a1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q4_a1"/>
                 <RadioButton
-                        android:text="@string/q4_a2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q4_a2"/>
                 <RadioButton
-                        android:text="@string/q4_a3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q4_a3"/>
             </RadioGroup>

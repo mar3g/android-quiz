@@ -5,24 +5,4 @@
     <string name="enable_submit">Enable Submit</string>
     <string name="clear">Clear</string>
     <string name="enable_clear">Enable Clear</string>
-
-    <string name="first_question">Which of the following are dividers of 10?</string>
-    <string name="q1_a1">2</string>
-    <string name="q1_a2">5</string>
-    <string name="q1_a3">6</string>
-
-    <string name="second_question">Which of the following are greater than 7?</string>
-    <string name="q2_a1">3</string>
-    <string name="q2_a2">6</string>
-    <string name="q2_a3">9</string>
-
-    <string name="third_question">What is the value of 2+2?</string>
-    <string name="q3_a1">2</string>
-    <string name="q3_a2">4</string>
-    <string name="q3_a3">10</string>
-
-    <string name="fourth_question">What is the value of 11*3?</string>
-    <string name="q4_a1">22</string>
-    <string name="q4_a2">14</string>
-    <string name="q4_a3">33</string>
 </resources>

@@ -2,7 +2,9 @@
     <string name="app_name">Quiz</string>
     <string name="main_text">Solve the quiz</string>
     <string name="submit">Submit</string>
+    <string name="enable_submit">Enable Submit</string>
     <string name="clear">Clear</string>
+    <string name="enable_clear">Enable Clear</string>
 
     <string name="first_question">Solve the quiz</string>
     <string name="q1_a1">Solve the quiz</string>

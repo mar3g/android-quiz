@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clearAllAnswers(List<CompoundButton> answers) {
-        answers.forEach(a -> a.setSelected(false));
+        answers.forEach(a -> a.setChecked(false));
     }
 
     private void checkTheAnswers(List<CompoundButton> answers) {

@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Quiz</string>
     <string name="main_text">Solve the quiz</string>
-    <string name="quiz_rules">Score up to 12 points - each option is evaluated. Get +1 point for correctly checked/unchecked answer
-        or -0.5 if the answer is wrong or missing. Good luck!</string>
+    <string name="quiz_rules">Get +1 point for correct answer, but -0.5 for wrong answer. Good luck!</string>
     <string name="submit">Submit</string>
     <string name="enable_submit">Enable Submit</string>
     <string name="clear">Clear</string>

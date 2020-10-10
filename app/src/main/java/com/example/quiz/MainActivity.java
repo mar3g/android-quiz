@@ -73,15 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkTheAnswers(List<Question> questions) {
         AtomicReference<Double> score = new AtomicReference<>((double) 0);
-        questions.forEach(q -> q.getAnswers().forEach(a -> {
-            if (a.isCorrectlySelected()) {
-                score.updateAndGet(v -> v + 1.0d);
-            } else {
-                score.updateAndGet(v -> v - 0.5d);
-            }
-        }));
+        questions.forEach(q -> q.getAnswers().forEach(a -> score.updateAndGet(v -> v + a.getAnswerPoints())));
         TextView scoreText = findViewById(R.id.scoreText);
-        scoreText.setText("Your score is " + (score.get() > 0 ? score : 0));
+        scoreText.setText("Your score is " + (score.get() > 0 ? score : 0) + "/5.0");
     }
 
     private List<CompoundButton> getAnswersButtons() {

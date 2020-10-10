@@ -29,11 +29,19 @@ public class Answer {
         return correspondingButton;
     }
 
-    public boolean isCorrectlySelected() {
+    public double getAnswerPoints() {
         if (correspondingButton == null) {
-            return false;
+            return 0.0d;
         }
 
-        return isCorrect == correspondingButton.isChecked();
+        if (!correspondingButton.isChecked()) {
+            return 0.0d;
+        } else {
+            if (isCorrect) {
+                return 1.0d;
+            } else {
+                return -0.5d;
+            }
+        }
     }
 }

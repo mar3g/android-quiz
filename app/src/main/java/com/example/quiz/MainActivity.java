@@ -52,7 +52,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clearAllAnswers(List<CompoundButton> answers) {
-        answers.forEach(a -> a.setChecked(false));
+        // reset checkboxes
+        answers.forEach(a -> {
+            if (a instanceof CheckBox) {
+                a.setChecked(false);
+            }
+        });
+
+        // reset radio groups
+        RadioGroup group1 = findViewById(R.id.group1);
+        group1.clearCheck();
+
+        RadioGroup group2 = findViewById(R.id.group2);
+        group2.clearCheck();
+
+        // reset displayed score
+        TextView scoreText = findViewById(R.id.scoreText);
+        scoreText.setText("");
     }
 
     private void checkTheAnswers(List<Question> questions) {
@@ -64,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 score.updateAndGet(v -> v - 0.5d);
             }
         }));
-
+        TextView scoreText = findViewById(R.id.scoreText);
+        scoreText.setText("Your score is " + (score.get() > 0 ? score : 0));
     }
 
     private List<CompoundButton> getAnswersButtons() {

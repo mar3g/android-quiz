@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content" android:id="@+id/q3"/>
             <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent" android:id="@+id/group1">
                 <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q3_a1"/>
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content" android:id="@+id/q4"/>
             <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent" android:id="@+id/group2">
                 <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/q4_a1"/>
@@ -120,5 +120,12 @@
             android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="64dp" android:layout_marginEnd="64dp"
             tools:ignore="UseSwitchCompatOrMaterialXml"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/scoreText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="120dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

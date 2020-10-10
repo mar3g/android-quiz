@@ -28,4 +28,12 @@ public class Answer {
     public CompoundButton getCorrespondingButton() {
         return correspondingButton;
     }
+
+    public boolean isCorrectlySelected() {
+        if (correspondingButton == null) {
+            return false;
+        }
+
+        return isCorrect == correspondingButton.isChecked();
+    }
 }

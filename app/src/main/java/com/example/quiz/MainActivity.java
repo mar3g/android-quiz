@@ -7,6 +7,7 @@ import com.example.quiz.elements.Question;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         clearButton.setOnClickListener(view -> clearAllAnswers(answersButtons));
 
         Button submitButton = findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(view -> checkTheAnswers(answersButtons));
+        submitButton.setOnClickListener(view -> checkTheAnswers(questions));
 
         // disable buttons until switch state is changed
         clearButton.setEnabled(false);
@@ -54,7 +55,15 @@ public class MainActivity extends AppCompatActivity {
         answers.forEach(a -> a.setChecked(false));
     }
 
-    private void checkTheAnswers(List<CompoundButton> answers) {
+    private void checkTheAnswers(List<Question> questions) {
+        AtomicReference<Double> score = new AtomicReference<>((double) 0);
+        questions.forEach(q -> q.getAnswers().forEach(a -> {
+            if (a.isCorrectlySelected()) {
+                score.updateAndGet(v -> v + 1.0d);
+            } else {
+                score.updateAndGet(v -> v - 0.5d);
+            }
+        }));
 
     }
 
@@ -107,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeQuestionsLabels(List<Question> questions, List<TextView> questionsTexts) {
-        for(int i=0; i<questionsTexts.size(); i++){
+        for (int i = 0; i < questionsTexts.size(); i++) {
             questionsTexts.get(i).setText(questions.get(i).getQuestionText());
         }
     }

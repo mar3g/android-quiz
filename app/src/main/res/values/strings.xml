@@ -6,4 +6,6 @@
     <string name="enable_submit">Enable Submit</string>
     <string name="clear">Clear</string>
     <string name="enable_clear">Enable Clear</string>
+    <string name="results_text">Your results</string>
+    <string name="back">Back</string>
 </resources>

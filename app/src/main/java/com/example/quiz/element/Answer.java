@@ -1,4 +1,4 @@
-package com.example.quiz.elements;
+package com.example.quiz.element;
 
 import android.widget.CompoundButton;
 

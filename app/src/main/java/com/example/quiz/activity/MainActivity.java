@@ -1,9 +1,11 @@
-package com.example.quiz;
+package com.example.quiz.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.quiz.elements.Question;
+import com.example.quiz.R;
+import com.example.quiz.element.Question;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,13 +13,15 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static List<Question> questions;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         // initialize questions
-        List<Question> questions = getExemplaryQuestions();
+        questions = getExemplaryQuestions();
 
         // initialize answers checkboxes/radiobuttons
         List<CompoundButton> answersButtons = getAnswersButtons();
@@ -65,17 +69,15 @@ public class MainActivity extends AppCompatActivity {
 
         RadioGroup group2 = findViewById(R.id.group2);
         group2.clearCheck();
-
-        // reset displayed score
-        TextView scoreText = findViewById(R.id.scoreText);
-        scoreText.setText("");
     }
 
     private void checkTheAnswers(List<Question> questions) {
         AtomicReference<Double> score = new AtomicReference<>((double) 0);
         questions.forEach(q -> q.getAnswers().forEach(a -> score.updateAndGet(v -> v + a.getAnswerPoints())));
-        TextView scoreText = findViewById(R.id.scoreText);
-        scoreText.setText("Your score is " + (score.get() > 0 ? score : 0) + "/5.0");
+
+        Intent results = new Intent(getApplicationContext(), ResultsActivity.class);
+        results.putExtra("score", (score.get() > 0 ? score.get() : 0.0d));
+        startActivity(results);
     }
 
     private List<CompoundButton> getAnswersButtons() {
@@ -144,5 +146,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeButtonTexts(List<Question> questions) {
         questions.forEach(q -> q.getAnswers().forEach(a -> a.getCorrespondingButton().setText(a.getAnswerText())));
+    }
+
+    public static List<Question> getQuestions() {
+        return questions;
     }
 }

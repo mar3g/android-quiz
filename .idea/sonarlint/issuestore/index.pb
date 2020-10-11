@@ -7,3 +7,5 @@ i
 9app/src/main/java/com/example/quiz/elements/Question.java,b\5\b5601e33e4e28e07827a3a6b98b218ff7d185da5
 d
 4app/src/main/java/com/example/quiz/MainActivity.java,e\c\ec099dceb8293364939a7c0ccfa4c1dbc81ddc8b
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
